@@ -3,7 +3,7 @@ package Bundle::Maintainer::MHASCH;
 use strict;
 use warnings;
 
-our $VERSION = '0.004';
+our $VERSION = '0.005';
 
 1;
 
@@ -15,7 +15,7 @@ Bundle::Maintainer::MHASCH - CPAN Modules maintained by Martin Becker (MHASCH).
 
 =head1 VERSION
 
-This documentation refers to version 0.004 of Bundle::Maintainer::MHASCH.
+This documentation refers to version 0.005 of Bundle::Maintainer::MHASCH.
 
 =head1 SYNOPSIS
 

@@ -43,8 +43,12 @@ plan tests => $versions + @modules;
 
 foreach my $mv (@modules) {
     my ($module, $version) = @{$mv};
-    require_ok $module;
-    version_ok($module, $version) if $version;
+    SKIP: {
+        my $loadable = eval "require $module";
+        skip "$module not loadable", $version? 2: 1 if !$loadable;
+        pass("require $module");
+        version_ok($module, $version) if $version;
+    }
 }
 
 sub version_ok {
